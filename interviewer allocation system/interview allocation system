@@ -1,0 +1,50 @@
+
+**************************************************
+Problem Statement: Interview Allocation System
+
+You are asked to design and implement a simplified Interview Allocation System that manages candidates, interviewers, and interview scheduling for a company.
+
+# Functional Requirements
+
+- Add a Candidate
+- Add a new candidate with details.
+- Add an Interviewer
+- Add a new interviewer with details and available slots.
+- Schedule an Interview
+- Allocate an interviewer to a candidate based on:
+    - Skill Match → at least one skill must match between candidate and interviewer.
+    - Availability → interviewer must have a free slot.
+- If multiple interviewers qualify, pick the one with the least number of interviews scheduled so far (fair distribution).
+- View All Scheduled Interviews
+- List all interviews with candidate name, interviewer name, and time slot.
+- Cancel an Interview
+- Cancel a scheduled interview and free up the interviewer’s slot.
+
+# Constraints & Expectations
+
+- Handle edge cases:
+    - Candidate without matching interviewer.
+    - Interviewer without available slots.
+    - Multiple candidates requesting the same slot.
+
+- The system should be menu-driven (CLI)
+- Code should follow clean architecture principles:
+- Separate models, services, and storage (in-memory store allowed).
+- Write modular, extensible design
+
+# Sample Flow
+
+Add Candidate: C1, Java, 2 yrs
+Add Interviewer: I1, skills=[Java, Spring], slots=[10-11, 11-12]
+Schedule Interview → C1 allocated with I1 at 10-11
+Add Candidate: C2, Python, 1 yr
+Add Interviewer: I2, skills=[Python], slots=[10-11]
+Schedule Interview → C2 allocated with I2 at 10-11
+View Interviews → Show list.
+Cancel Interview for C1 → I1’s slot 10-11 becomes available again.
+
+👉 Deliverables in 90 min:
+
+Working code with basic functions.
+In-memory store for persistence.
+Focus on correctness, modularity, and clarity
